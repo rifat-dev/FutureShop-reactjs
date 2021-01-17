@@ -19,7 +19,7 @@ const basketReducer = (state = init, action) =>{
          }
          case Types.REMOVE_PRODUCT:{
            let newBascket = [...state.bascket]
-           newBascket = newBascket.filter(item=> item._id === action.palyload._id)
+           newBascket = newBascket.filter(item=> item._id !== action.palyload._id)
            return{
              bascket: newBascket,
              totalAmount: state.totalAmount - action.palyload.price,

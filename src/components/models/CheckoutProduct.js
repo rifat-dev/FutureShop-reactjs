@@ -2,10 +2,10 @@ import {connect } from 'react-redux'
 import {removeProduct} from '../../store/action/orderAction'
 import './CheckoutProduct.css'
 
-function CheckoutProduct(props,{ id, image, title, price }) {
+function CheckoutProduct({ id, image, title, price,removeProduct }) {
 
     const removeFromBasket = () => {
-        props.removeProduct(id,price)
+        removeProduct(id,price)
     }
 
     return (
